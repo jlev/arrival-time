@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.less') }}" type="text/less" media="screen" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/less-1.1.3.min.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</head>
+
+<body>
+
+<div id="left">
+    <h2>BART</h2>
+    <ul class="routes BART North"></ul>
+    <ul class="routes BART South"></ul>
+</div>
+
+<div id="right">
+    <h2>AC Transit</h2>
+    <h3>North</h3>
+    <ul class="routes ACTransit North"></ul>
+
+    <h3>South</h3>
+    <ul class="routes ACTransit South"></ul>
+</div>
+
+<div id="lastUpdated">Last Updated: <span></span></div>
+
+</body>
+</html>
