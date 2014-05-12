@@ -12,7 +12,7 @@
 @gutter-width: 0;
 
 // Uncomment the definition below for a percentage-based layout
-// @total-width: 100%;
+//@total-width: 100%;
 
 //general text
 
@@ -42,6 +42,7 @@ h3 {
   color:white;
   margin: 0px 0 0px 0;
   font-size: 28;
+  text-align: center;
 }
 
 
@@ -69,20 +70,48 @@ header#top {
     .column(3);
   }
   .blank {
-    .column(1);
+    .column(3);
   }
   .ac-image {
     .column(1);
   }
   .ac-text {
-    .column(6)
+    .column(4)
   }
 }
 
-// main and sidebar
-#left {
-    .column(9);
+// main body
+.left {
+    .column(4);
 }
-#right {
-    .column(3);
+.center {
+  .column(1);
+}
+.right {
+    .column(7);
+}
+
+//individual trains and buses
+
+ul.routes.BART .stopName {
+  .column(2);
+  background-color:#27a9e1;
+}
+
+ul.routes.BART .departures {
+  .column(2);
+  background-color:black;
+  color:white;
+}
+
+ul.routes.ACTransit .stopName {
+  .column(1);
+  background-color:#006e57;
+  color:white;
+}
+
+ul.routes.ACTransit .departures {
+  .column(1);
+  background-color:black;
+  color:white;
 }
