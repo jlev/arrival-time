@@ -58,7 +58,7 @@ function parseFeed(feed, agency) {
 }
 
 function getDeparturesForStops(stops, agency) {
-    proxy = "http://localhost:5000/crossdomain";
+    proxy = "/crossdomain";
     url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
     token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
 
