@@ -8,11 +8,42 @@
 
 // Specify the number of columns and set column and gutter widths
 @columns: 12;
-@column-width: 60;
-@gutter-width: 20;
+@column-width: 160;
+@gutter-width: 0;
 
 // Uncomment the definition below for a percentage-based layout
 // @total-width: 100%;
+
+//general text
+
+
+body {
+	margin: 0px;
+  background-color: #58585b;
+  font-family: 'Roboto';
+}
+
+h1 {
+  font-family: 'Open+Sans', Arial, serif; font-weight: 800;
+  color:white;
+  font-size:75;
+  margin:0px 0 0px 0;
+
+}
+
+h2 {
+  font-family: 'Roboto', Arial, serif; font-weight: 600;
+  color: #d1d2d4;
+  font-size:41;
+  margin:-10px 0 0px 0;
+}
+
+h3 {
+  color:white;
+  margin: 0px 0 0px 0;
+  font-size: 28;
+}
+
 
 
 ////////////
@@ -30,6 +61,22 @@ div.center {
 header#top {
     .column(12);
     margin-bottom: 1em;
+
+  .bart-image {
+    .column(1);
+  }
+  .bart-text {
+    .column(3);
+  }
+  .blank {
+    .column(1);
+  }
+  .ac-image {
+    .column(1);
+  }
+  .ac-text {
+    .column(6)
+  }
 }
 
 // main and sidebar
