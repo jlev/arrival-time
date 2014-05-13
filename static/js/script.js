@@ -1,10 +1,10 @@
 BART_DIRECTION_LOOKUP = {
     'Daly City': 'South',
     'Dublin Pleasanton': 'South',
-    'Fremont': 'North',
+    'Fremont': 'South',
     'Millbrae': 'South',
-    'North Concord': 'South',
-    'Pittsburg Bay Point': 'South',
+    'North Concord': 'North',
+    'Pittsburg Bay Point': 'North',
     'Richmond': 'North',
     'SF Airport then Millbrae': 'South',
     'SF Airport then Pittsburg Bay Point': 'South'
