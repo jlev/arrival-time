@@ -40,13 +40,15 @@ h2 {
 
 h3 {
   color:white;
-  margin: 40px 0 0px 0;
+  margin: 19px 0 -10px 0;
   font-size: 28;
   text-align: center;
+	clear:left;
 }
 
 ul {
-	font-size:42;
+	font-size:35;
+	list-style-type: none;
 }
 
 ////////////
@@ -60,6 +62,7 @@ header#top {
 
   .bart-image {
     .column(1);
+	margin: 0 -27px 0 39px;
   }
   .bart-text {
     .column(3);
@@ -67,9 +70,11 @@ header#top {
   .ac-image {
     .column(1);
     .push(1);
+		margin: 0 -23px 0 225px;
   }
   .ac-text {
     .column(4)
+
   }
 }
 
@@ -91,41 +96,66 @@ header#top {
 
 //individual trains and buses
 
-ul.routes.BART .stopName {
-  .column(1);
-  background-color:#27a9e1;
-	margin: 0 0 0 -59px;
-	text-align: center;
-	width: 233px;
-	padding: 10px 10px 10px 10px;
-}
+ul.routes {
+	li div {
+		padding: 10px;
+		text-align: center;
 
-ul.routes.BART .departures {
-  .column(1);
-  background-color:black;
-	width: 225px;
-	text-align: center;
-  color:white;
+		&.departures {
+			color:white;
+		}
+	}
 
-	padding: 10px 10px 10px 10px;
-}
+	&.BART {
+		li {
+			float:left;
+			clear:left;
+		}
 
-ul.routes.ACTransit .stopName {
-  .column(1);
-  background-color:#006e57;
-	text-align: center;
-	margin-bottom: 10px;
-	margin-left: 65px;
-	width: 160;
-	padding: 10px 10px 10px 10px;
-  color:white;
-}
+		.stopName {
+			.column(1);
+			background-color:#27a9e1;
+			margin: 0 0 0 -59px;
+			text-align: center;
+			width: 233px;
 
-ul.routes.ACTransit .departures {
-  .column(1);
-  background-color:black;
-	text-align: center;
-	width: 194px;
-	padding: 10px 10px 10px 10px;
-  color:white;
+		}
+		.departures {
+			.column(1);
+			background-color:black;
+			width: 225px;
+		}
+	}
+
+	&.ACTransit {
+		li {
+			width:460px;
+			float:left;
+			clear:left;
+			position:relative;
+			left: 90px;
+		}
+
+		.stopName {
+			.column(1);
+			background-color:#006e57;
+			margin-bottom: 10px;
+			width: 160px;
+		}
+
+		.departures {
+			.column(1);
+			background-color:black;
+			width: 194px;
+		}
+	}
+
+	&.Broadway {
+		background-color:#9FBE3C;
+		text-align:center;
+		margin-bottom: 10px;
+		margin-left: 65px;
+		width: 160px;
+		color:black;
+	}
 }
