@@ -9,7 +9,7 @@
 // Specify the number of columns and set column and gutter widths
 @columns: 12;
 @column-width: 160;
-@gutter-width: 0;
+@gutter-width: 1;
 
 // Uncomment the definition below for a percentage-based layout
 //@total-width: 100%;
@@ -18,37 +18,35 @@
 
 
 body {
-	margin: 0px;
+  padding: 20px;
   background-color: #58585b;
   font-family: 'Roboto';
 }
 
 h1 {
   font-family: 'Open+Sans', Arial, serif; font-weight: 800;
-  color:white;
-  font-size:75;
-  margin:0px 0 0px 0;
-
+  color: white;
+  font-size: 75;
+  margin: 0px 0 0px 0;
 }
 
 h2 {
   font-family: 'Roboto', Arial, serif; font-weight: 600;
   color: #d1d2d4;
-  font-size:41;
-  margin:-10px 0 0px 0;
+  font-size: 41;
+  margin: -10px 0 0px 0;
 }
 
 h3 {
-  color:white;
-  margin: 19px 0 -10px 0;
+  color: white;
   font-size: 28;
   text-align: center;
-	clear:left;
+  clear: left;
 	.push(1);
 }
 
 ul {
-	font-size:35;
+	font-size: 35;
 	list-style-type: none;
 }
 
@@ -59,11 +57,10 @@ ul {
 // header
 header#top {
   .column(12);
-  margin-top: 20px;
 
   .bart-image {
     .column(1);
-	margin: 0 -27px 0 106px;
+  	margin: 0 -27px 0 106px;
   }
   .bart-text {
     .column(3);
@@ -75,7 +72,6 @@ header#top {
   }
   .ac-text {
     .column(4)
-
   }
 }
 
@@ -88,45 +84,55 @@ header#top {
 	.push(1);
 }
 .right {
-    .column(6);
-    .push(0);
+  .column(6);
+  .push(1);
 }
 
 //individual trains and buses
 
 ul.routes {
-	li div {
-		padding: 10px;
-		text-align: center;
+  margin-bottom:20px;
 
-		&.departures {
-			color:white;
-			.column(1);
-			background-color:black;
-		}
+	li {
+    float: left;
+    margin-bottom: 20px;
+
+    div {
+  		padding: 10px;
+      text-align: center;
+
+  		&.departures {
+        .column(1);
+  			color:white;
+  			background-color:black;
+        margin-bottom: 20px;
+  		}
+    }
 	}
 
 	&.BART {
+    .column(3);
+
 		li {
-			float:left;
-			clear:left;
-		}
+      clear: left;
+    }
 
 		.stopName {
-			width:333px
+      .column(2);
+			width: 275px; //custom, break grid
 			background-color:#27a9e1;
-			margin: 0 0 20px -99px;
-
 		}
+    .departures {
+      .column(1);
+    }
 	}
 
 	&.ACTransit {
+    .column(6);
+    .push(1);
+
 		li {
-			width:460px;
-			float:left;
-			position:relative;
-			left: 90px;
-			margin-bottom: 20px;
+			.column(3);
 		}
 
 		.stopName {
@@ -136,16 +142,21 @@ ul.routes {
 	}
 
 	&.Broadway {
-			.stopname{
+    .column(6);
+    .push(1);
+
+		.stopname {
+      .column(3);
 			background-color:#9FBE3C;
-			margin-left: 65px;
-			width: 160px;
 		}
+    .departures {
+      .column(2);
+    }
 	}
 }
 
 #lastupdated {
 	.column(12);
-	color:white;
-	font-size:21px;
+	color: white;
+	font-size: 21px;
 }

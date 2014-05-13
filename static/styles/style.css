@@ -12,7 +12,7 @@ body:after {
   clear: both;
 }
 body {
-  margin: 0px;
+  padding: 20px;
   background-color: #58585b;
   font-family: 'Roboto';
 }
@@ -32,11 +32,10 @@ h2 {
 }
 h3 {
   color: white;
-  margin: 19px 0 -10px 0;
   font-size: 28;
   text-align: center;
   clear: left;
-  margin-left: 160px;
+  margin-left: 161.5px;
 }
 ul {
   font-size: 35;
@@ -45,105 +44,144 @@ ul {
 header#top {
   display: inline;
   float: left;
-  width: 1920px;
-  margin: 0 0px;
-  margin-top: 20px;
+  width: 1931px;
+  margin: 0 0.5px;
 }
 header#top .bart-image {
   display: inline;
   float: left;
   width: 160px;
-  margin: 0 0px;
+  margin: 0 0.5px;
   margin: 0 -27px 0 106px;
 }
 header#top .bart-text {
   display: inline;
   float: left;
-  width: 480px;
-  margin: 0 0px;
+  width: 482px;
+  margin: 0 0.5px;
 }
 header#top .ac-image {
   display: inline;
   float: left;
   width: 160px;
-  margin: 0 0px;
-  margin-left: 160px;
+  margin: 0 0.5px;
+  margin-left: 161.5px;
   margin: 0 -23px 0 225px;
 }
 header#top .ac-text {
   display: inline;
   float: left;
-  width: 640px;
-  margin: 0 0px;
+  width: 643px;
+  margin: 0 0.5px;
 }
 .content {
   display: inline;
   float: left;
-  width: 1920px;
-  margin: 0 0px;
+  width: 1931px;
+  margin: 0 0.5px;
 }
 .left {
   display: inline;
   float: left;
-  width: 480px;
-  margin: 0 0px;
-  margin-left: 160px;
+  width: 482px;
+  margin: 0 0.5px;
+  margin-left: 161.5px;
 }
 .right {
   display: inline;
   float: left;
-  width: 960px;
-  margin: 0 0px;
-  margin-left: 0px;
+  width: 965px;
+  margin: 0 0.5px;
+  margin-left: 161.5px;
+}
+ul.routes {
+  margin-bottom: 20px;
+}
+ul.routes li {
+  float: left;
+  margin-bottom: 20px;
 }
 ul.routes li div {
   padding: 10px;
   text-align: center;
 }
 ul.routes li div.departures {
-  color: white;
   display: inline;
   float: left;
   width: 160px;
-  margin: 0 0px;
+  margin: 0 0.5px;
+  color: white;
   background-color: black;
+  margin-bottom: 20px;
+}
+ul.routes.BART {
+  display: inline;
+  float: left;
+  width: 482px;
+  margin: 0 0.5px;
 }
 ul.routes.BART li {
-  float: left;
   clear: left;
 }
 ul.routes.BART .stopName {
   display: inline;
   float: left;
-  width: 160px;
-  margin: 0 0px;
+  width: 321px;
+  margin: 0 0.5px;
+  width: 275px;
   background-color: #27a9e1;
-  margin: 0 0 20px -59px;
+}
+ul.routes.BART .departures {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0.5px;
+}
+ul.routes.ACTransit {
+  display: inline;
+  float: left;
+  width: 965px;
+  margin: 0 0.5px;
+  margin-left: 161.5px;
 }
 ul.routes.ACTransit li {
-  width: 460px;
+  display: inline;
   float: left;
-  position: relative;
-  left: 90px;
-  margin-bottom: 20px;
+  width: 482px;
+  margin: 0 0.5px;
 }
 ul.routes.ACTransit .stopName {
   display: inline;
   float: left;
   width: 160px;
-  margin: 0 0px;
+  margin: 0 0.5px;
   background-color: #006e57;
 }
+ul.routes.Broadway {
+  display: inline;
+  float: left;
+  width: 965px;
+  margin: 0 0.5px;
+  margin-left: 161.5px;
+}
 ul.routes.Broadway .stopname {
+  display: inline;
+  float: left;
+  width: 482px;
+  margin: 0 0.5px;
   background-color: #9FBE3C;
-  margin-left: 65px;
-  width: 160px;
+}
+ul.routes.Broadway .departures {
+  display: inline;
+  float: left;
+  width: 321px;
+  margin: 0 0.5px;
 }
 #lastupdated {
   display: inline;
   float: left;
-  width: 1920px;
-  margin: 0 0px;
+  width: 1931px;
+  margin: 0 0.5px;
   color: white;
   font-size: 21px;
 }
