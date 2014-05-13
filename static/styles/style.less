@@ -44,6 +44,7 @@ h3 {
   font-size: 28;
   text-align: center;
 	clear:left;
+	.push(1);
 }
 
 ul {
@@ -62,7 +63,7 @@ header#top {
 
   .bart-image {
     .column(1);
-	margin: 0 -27px 0 39px;
+	margin: 0 -27px 0 106px;
   }
   .bart-text {
     .column(3);
@@ -84,14 +85,11 @@ header#top {
 }
 .left {
   .column(3);
-	padding-left:55px;
+	.push(1);
 }
 .right {
-    .column(4);
-    .push(1);
-}
-.far-right {
-		.column(2);
+    .column(6);
+    .push(0);
 }
 
 //individual trains and buses
@@ -115,15 +113,15 @@ ul.routes {
 		.stopName {
 			.column(1);
 			background-color:#27a9e1;
-			margin: 0 0 0 -59px;
+			margin: 0 0 20px -59px;
 			text-align: center;
-			width: 233px;
+			width: 200px;
 
 		}
 		.departures {
 			.column(1);
 			background-color:black;
-			width: 225px;
+			width: 200px;
 		}
 	}
 
@@ -131,22 +129,21 @@ ul.routes {
 		li {
 			width:460px;
 			float:left;
-			clear:left;
 			position:relative;
 			left: 90px;
+			margin-bottom: 20px;
 		}
 
 		.stopName {
 			.column(1);
 			background-color:#006e57;
-			margin-bottom: 10px;
-			width: 160px;
+			width: 200px;
 		}
 
 		.departures {
 			.column(1);
 			background-color:black;
-			width: 194px;
+			width: 200px;
 		}
 	}
 
@@ -158,4 +155,10 @@ ul.routes {
 		width: 160px;
 		color:black;
 	}
+}
+
+#lastupdated {
+	.column(12);
+	color:white;
+	font-size:21px;
 }
