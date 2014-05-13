@@ -1,13 +1,21 @@
 BART_DIRECTION_LOOKUP = {
+    '24th St. Mission': 'South',
+    'Bayfair': 'North',
+    'Concord': 'North',
     'Daly City': 'South',
-    'Dublin Pleasanton': 'South',
+    'Dublin/Pleasanton': 'South',
+    'Embarcadero': 'South',
+    'Montgomery': 'South',
     'Fremont': 'South',
+    'South San Francisco': 'South',
     'Millbrae': 'South',
+    'Union City': 'South',
     'North Concord': 'North',
     'Pittsburg Bay Point': 'North',
     'Richmond': 'North',
     'SF Airport then Millbrae': 'South',
-    'SF Airport then Pittsburg Bay Point': 'South'
+    'SF Airport then Pittsburg Bay Point': 'South',
+    'SF Airport': 'South'
 };
 
 String.prototype.condenseSpaces = function() {
@@ -95,7 +103,7 @@ function getDeparturesForStops(stops, agency) {
 }
 
 function updateFeeds() {
-    var BART_stops = [65, 66, 67]; //19th St. Oakland, platforms 1,2,3
+    var BART_stops = [65, 66]; //19th St. Oakland, platforms 1,2,3
     var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
@@ -106,6 +114,6 @@ function updateFeeds() {
 
 $(document).ready(function() {
     updateFeeds();
-    //window.setInterval('updateFeeds()',30*1000);
+  //  window.setInterval('updateFeeds()',30*1000);
     console.log('update');
 });
