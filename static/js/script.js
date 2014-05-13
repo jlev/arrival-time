@@ -108,6 +108,6 @@ function updateFeeds() {
 
 $(document).ready(function() {
     updateFeeds();
-    window.setInterval('updateFeeds()',30*1000);
+    //window.setInterval('updateFeeds()',30*1000);
     console.log('update');
 });
