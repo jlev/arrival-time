@@ -15,8 +15,8 @@ String.prototype.condenseSpaces = function() {
 };
 
 function parseFeed(feed, agency) {
-    data = $.parseXML(feed.content);
-    agency_name = $(data).find('Agency').attr('Name').condenseSpaces();
+    var data = $.parseXML(feed.content);
+    var agency_name = $(data).find('Agency').attr('Name').condenseSpaces();
 
     if (agency !== agency_name) {
         console.log('agency name mismatch');
@@ -37,15 +37,30 @@ function parseFeed(feed, agency) {
             return true; //skip to next route
         }
 
-        direction = route.find('RouteDirection');
+        var direction = route.find('RouteDirection');
         if (direction.length > 0) {
-            outputSel = '.routes.'+agency+'.'+direction.attr('Code');
-            stopName = route_name + " " + direction.attr('Code');
+            direction = direction.attr('Code');
+
+            // special case for AC Transit Broadway shuttle
+            if (agency === "ACTransit" && (route_name === "BSD" || route_name == "BSN")) {
+                route_name = "Broadway Shuttle";
+                outputSel = '.routes.'+agency+'.Broadway';
+                stopName = route_name+" "+direction;
+            } else {
+                outputSel = '.routes.'+agency+'.'+direction;
+                stopName = route_name;
+            }
+            
         } else {
-            //TODO: special case for BART directions
-            direction = BART_DIRECTION_LOOKUP[route_name];
-            outputSel = '.routes.'+agency+'.'+direction;
-            stopName = route_name;
+            //special case for BART directions
+            if (agency === "BART") {
+                direction = BART_DIRECTION_LOOKUP[route_name];
+                outputSel = '.routes.'+agency+'.'+direction;
+                stopName = route_name;
+            } else {
+                outputSel = '.routes.'+agency;
+                stopName = route_name;
+            }
         }
         var disp = $('<li><div class="stopName"></div><div class="departures"></div></li>');
         disp.addClass(route_name.condenseSpaces());
@@ -58,11 +73,11 @@ function parseFeed(feed, agency) {
 }
 
 function getDeparturesForStops(stops, agency) {
-    proxy = "/crossdomain";
-    url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
-    token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
+    var proxy = "/crossdomain";
+    var url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
+    var token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
 
-    div = $(".routes."+agency);
+    var div = $(".routes."+agency);
     //clear routes
     div.empty();
 
@@ -82,8 +97,8 @@ function getDeparturesForStops(stops, agency) {
 }
 
 function updateFeeds() {
-    BART_stops = [66]; //19th St. Oakland
-    ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
+    var BART_stops = [66]; //19th St. Oakland
+    var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
 
