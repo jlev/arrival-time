@@ -97,7 +97,7 @@ function getDeparturesForStops(stops, agency) {
 }
 
 function updateFeeds() {
-    var BART_stops = [66]; //19th St. Oakland
+    var BART_stops = [65, 66, 67]; //19th St. Oakland, platforms 1,2,3
     var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
