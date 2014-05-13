@@ -1,0 +1,149 @@
+@import '.reset.css';
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body {
+  margin: 0px;
+  background-color: #58585b;
+  font-family: 'Roboto';
+}
+h1 {
+  font-family: 'Open+Sans', Arial, serif;
+  font-weight: 800;
+  color: white;
+  font-size: 75;
+  margin: 0px 0 0px 0;
+}
+h2 {
+  font-family: 'Roboto', Arial, serif;
+  font-weight: 600;
+  color: #d1d2d4;
+  font-size: 41;
+  margin: -10px 0 0px 0;
+}
+h3 {
+  color: white;
+  margin: 19px 0 -10px 0;
+  font-size: 28;
+  text-align: center;
+  clear: left;
+  margin-left: 160px;
+}
+ul {
+  font-size: 35;
+  list-style-type: none;
+}
+header#top {
+  display: inline;
+  float: left;
+  width: 1920px;
+  margin: 0 0px;
+  margin-top: 20px;
+}
+header#top .bart-image {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0px;
+  margin: 0 -27px 0 106px;
+}
+header#top .bart-text {
+  display: inline;
+  float: left;
+  width: 480px;
+  margin: 0 0px;
+}
+header#top .ac-image {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0px;
+  margin-left: 160px;
+  margin: 0 -23px 0 225px;
+}
+header#top .ac-text {
+  display: inline;
+  float: left;
+  width: 640px;
+  margin: 0 0px;
+}
+.content {
+  display: inline;
+  float: left;
+  width: 1920px;
+  margin: 0 0px;
+}
+.left {
+  display: inline;
+  float: left;
+  width: 480px;
+  margin: 0 0px;
+  margin-left: 160px;
+}
+.right {
+  display: inline;
+  float: left;
+  width: 960px;
+  margin: 0 0px;
+  margin-left: 0px;
+}
+ul.routes li div {
+  padding: 10px;
+  text-align: center;
+}
+ul.routes li div.departures {
+  color: white;
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0px;
+  background-color: black;
+}
+ul.routes.BART li {
+  float: left;
+  clear: left;
+}
+ul.routes.BART .stopName {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0px;
+  background-color: #27a9e1;
+  margin: 0 0 20px -59px;
+}
+ul.routes.ACTransit li {
+  width: 460px;
+  float: left;
+  position: relative;
+  left: 90px;
+  margin-bottom: 20px;
+}
+ul.routes.ACTransit .stopName {
+  display: inline;
+  float: left;
+  width: 160px;
+  margin: 0 0px;
+  background-color: #006e57;
+}
+ul.routes.Broadway .stopname {
+  background-color: #9FBE3C;
+  margin-left: 65px;
+  width: 160px;
+}
+#lastupdated {
+  display: inline;
+  float: left;
+  width: 1920px;
+  margin: 0 0px;
+  color: white;
+  font-size: 21px;
+}

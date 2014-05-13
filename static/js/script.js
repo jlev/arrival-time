@@ -44,12 +44,10 @@ function parseFeed(feed, agency) {
             // special case for AC Transit Broadway shuttle
             if (agency === "ACTransit" && (route_name === "BSD" || route_name == "BSN")) {
                 agency = "Broadway";
-                outputSel = '.routes.'+agency+'.Broadway';
-                stopName = route_name;
-            } else {
-                outputSel = '.routes.'+agency+'.'+direction;
-                stopName = route_name;
+                route_name = "Broadway Shuttle";
             }
+            stopName = route_name;
+            outputSel = '.routes.'+agency+'.'+direction;
 
         } else {
             //special case for BART directions
