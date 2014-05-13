@@ -38,6 +38,7 @@ h3 {
   clear: left;
   margin-left: 160px;
 }
+
 ul {
   font-size: 35;
   list-style-type: none;
@@ -85,7 +86,7 @@ header#top .ac-text {
 .left {
   display: inline;
   float: left;
-  width: 480px;
+  width: 520px;
   margin: 0 0px;
   margin-left: 160px;
 }
@@ -115,10 +116,10 @@ ul.routes.BART li {
 ul.routes.BART .stopName {
   display: inline;
   float: left;
-  width: 160px;
+  width: 330px;
   margin: 0 0px;
   background-color: #27a9e1;
-  margin: 0 0 20px -59px;
+  margin: 0 0 20px -102px;
 }
 ul.routes.ACTransit li {
   width: 460px;
@@ -134,10 +135,20 @@ ul.routes.ACTransit .stopName {
   margin: 0 0px;
   background-color: #006e57;
 }
+ul.routes.Broadway li {
+  width: 700px;
+  float: left;
+  position: relative;
+  left: 90px;
+  margin-bottom: 20px;
+}
 ul.routes.Broadway .stopname {
   background-color: #9FBE3C;
   margin-left: 65px;
-  width: 160px;
+  width: 330px;
+}
+ul.routes.Broadway .departures {
+  width: 330px;
 }
 #lastupdated {
   display: inline;

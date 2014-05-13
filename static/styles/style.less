@@ -38,13 +38,18 @@ h2 {
   margin:-10px 0 0px 0;
 }
 
-h3 {
-  color:white;
-  margin: 19px 0 -10px 0;
-  font-size: 28;
-  text-align: center;
+&.h3 {
+	color:white;
+	margin: 19px 0 -10px 0;
+	font-size: 28;
+	text-align: center;
 	clear:left;
-	.push(1);
+	.left {
+		margin:0px
+	}
+	.right{
+		margin:160px;
+	}
 }
 
 ul {
@@ -136,12 +141,11 @@ ul.routes {
 	}
 
 	&.Broadway {
+		width:327px;
 			.stopname{
 			background-color:#9FBE3C;
 			margin-left: 65px;
-			width: 160px;
 		}
-	}
 }
 
 #lastupdated {
