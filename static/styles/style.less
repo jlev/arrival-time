@@ -51,17 +51,10 @@ h3 {
 // LAYOUT //
 ////////////
 
-// center the contents
-div.center {
-    width: 960px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
 // header
 header#top {
-    .column(12);
-    margin-top: 20px;
+  .column(12);
+  margin-top: 20px;
 
   .bart-image {
     .column(1);
@@ -69,11 +62,9 @@ header#top {
   .bart-text {
     .column(3);
   }
-  .blank {
-    .column(3);
-  }
   .ac-image {
     .column(1);
+    .push(1);
   }
   .ac-text {
     .column(4)
@@ -81,14 +72,15 @@ header#top {
 }
 
 // main body
-.left {
-    .column(4);
+.content {
+  .column(12);
 }
-.center {
-  .column(1);
+.left {
+  .column(4);
 }
 .right {
     .column(7);
+    .push(1);
 }
 
 //individual trains and buses

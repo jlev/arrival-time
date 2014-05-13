@@ -15,48 +15,41 @@
 
 <body>
 
-	<header id="top">
-    <div class="bart-image">
-      <img src="../static/img/BART.png" height="120px">
+<div class="content">
+    <header id="top">
+        <div class="bart-image">
+          <img src="../static/img/BART.png" height="120px">
+        </div>
+        <div class="bart-text">
+        	<h1>BART</h1>
+        	<h2>19th Street Station<h2>
+        </div>
+        <div class="ac-image">
+        	<img src="../static/img/AC-transit.png" height="120px">
+    	</div>
+    	<div class="ac-text">
+        	<h1>AC TRANSIT</h1>
+        	<h2>Bus Stops<h2>
+    	</div>
+    </header>
+
+    <div class="left">
+        <h3>Northbound</h3>
+        <ul class="routes BART North"></ul>
+        <h3>San Francisco and Southbound</h3>
+        <ul class="routes BART South"></ul>
     </div>
-	  <div class="bart-text">
-			<h1>BART</h1>
-			<h2>19th Street Station<h2>
-		</div>
-	  <div class="blank">
-	  </div>
-		<div class="ac-image">
-			<img src="../static/img/AC-transit.png" height="120px">
-		</div>
-		<div class="ac-text">
-			<h1>AC TRANSIT</h1>
-			<h2>Bus Stops<h2>
-		</div>
-	</header>
 
+    <div class="right">
+        <h3>North</h3>
+        <ul class="routes ACTransit North"></ul>
 
+        <h3>South</h3>
+        <ul class="routes ACTransit South"></ul>
+    </div>
 
-<div class="left">
-    <h3>Northbound</h3>
-    <ul class="routes BART North"></ul>
-    <h3>San Francisco and Southbound</h3>
-    <ul class="routes BART South"></ul>
+    <div id="lastUpdated">Last Updated: <span></span></div>
 </div>
-
-<div class="center">
-    &nbsp;
-</div>
-
-<div class="right">
-    <h2>AC Transit</h2>
-    <h3>North</h3>
-    <ul class="routes ACTransit North"></ul>
-
-    <h3>South</h3>
-    <ul class="routes ACTransit South"></ul>
-</div>
-
-<div id="lastUpdated">Last Updated: <span></span></div>
 
 </body>
 </html>
