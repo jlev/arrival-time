@@ -15,8 +15,8 @@ String.prototype.condenseSpaces = function() {
 };
 
 function parseFeed(feed, agency) {
-    data = $.parseXML(feed.content);
-    agency_name = $(data).find('Agency').attr('Name').condenseSpaces();
+    var data = $.parseXML(feed.content);
+    var agency_name = $(data).find('Agency').attr('Name').condenseSpaces();
 
     if (agency !== agency_name) {
         console.log('agency name mismatch');
@@ -72,11 +72,11 @@ function parseFeed(feed, agency) {
 }
 
 function getDeparturesForStops(stops, agency) {
-    proxy = "/crossdomain";
-    url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
-    token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
+    var proxy = "/crossdomain";
+    var url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
+    var token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
 
-    div = $(".routes."+agency);
+    var div = $(".routes."+agency);
     //clear routes
     div.empty();
 
@@ -96,8 +96,8 @@ function getDeparturesForStops(stops, agency) {
 }
 
 function updateFeeds() {
-    BART_stops = [66]; //19th St. Oakland
-    ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
+    var BART_stops = [66]; //19th St. Oakland
+    var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
 
