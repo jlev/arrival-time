@@ -37,15 +37,29 @@ function parseFeed(feed, agency) {
             return true; //skip to next route
         }
 
-        direction = route.find('RouteDirection');
+        var direction = route.find('RouteDirection');
         if (direction.length > 0) {
-            outputSel = '.routes.'+agency+'.'+direction.attr('Code');
-            stopName = route_name + " " + direction.attr('Code');
+            direction = direction.attr('Code');
+
+            // special case for AC Transit Broadway shuttle
+            if (agency === "ACTransit" && (route_name === "BSD" || route_name == "BSN")) {
+                route_name = "Broadway";
+                outputSel = '.routes.'+agency+'.Broadway';
+            } else {
+                outputSel = '.routes.'+agency+'.'+direction;
+            }
+            stopName = route_name + " " + direction;
+            
         } else {
-            //TODO: special case for BART directions
-            direction = BART_DIRECTION_LOOKUP[route_name];
-            outputSel = '.routes.'+agency+'.'+direction;
-            stopName = route_name;
+            //special case for BART directions
+            if (agency === "BART") {
+                direction = BART_DIRECTION_LOOKUP[route_name];
+                outputSel = '.routes.'+agency+'.'+direction;
+                stopName = route_name;
+            } else {
+                outputSel = '.routes.'+agency;
+                stopName = route_name;
+            }
         }
         var disp = $('<li><div class="stopName"></div><div class="departures"></div></li>');
         disp.addClass(route_name.condenseSpaces());
