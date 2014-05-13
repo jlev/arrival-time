@@ -45,7 +45,9 @@ h3 {
   text-align: center;
 }
 
-
+ul {
+	font-size:42;
+}
 
 ////////////
 // LAYOUT //
@@ -76,34 +78,54 @@ header#top {
   .column(12);
 }
 .left {
-  .column(4);
+  .column(3);
+	padding-left:55px;
 }
 .right {
-    .column(7);
+    .column(4);
     .push(1);
+}
+.far-right {
+		.column(2);
 }
 
 //individual trains and buses
 
 ul.routes.BART .stopName {
-  .column(2);
+  .column(1);
   background-color:#27a9e1;
+	margin: 0 0 0 -59px;
+	text-align: center;
+	width: 233px;
+	padding: 10px 10px 10px 10px;
 }
 
 ul.routes.BART .departures {
-  .column(2);
+  .column(1);
   background-color:black;
+	width: 225px;
+	text-align: center;
   color:white;
+
+	padding: 10px 10px 10px 10px;
 }
 
 ul.routes.ACTransit .stopName {
   .column(1);
   background-color:#006e57;
+	text-align: center;
+	margin-bottom: 10px;
+	margin-left: 65px;
+	width: 160;
+	padding: 10px 10px 10px 10px;
   color:white;
 }
 
 ul.routes.ACTransit .departures {
   .column(1);
   background-color:black;
+	text-align: center;
+	width: 194px;
+	padding: 10px 10px 10px 10px;
   color:white;
 }
