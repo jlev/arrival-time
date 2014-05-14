@@ -1,4 +1,4 @@
-BART_DIRECTION_LOOKUP = {
+var BART_DIRECTION_LOOKUP = {
     '24th St. Mission': 'South',
     'Bayfair': 'North',
     'Concord': 'North',
@@ -46,11 +46,13 @@ function parseFeed(feed, agency) {
         }
 
         var direction = route.find('RouteDirection');
+        var outputSel, stopName = null;
+
         if (direction.length > 0) {
             direction = direction.attr('Code');
 
             // special case for AC Transit Broadway shuttle
-            if (agency === "ACTransit" && (route_name === "BSD" || route_name == "BSN")) {
+            if (agency === "ACTransit" && (route_name === "BSD" || route_name === "BSN")) {
                 agency = "Broadway";
                 route_name = "Broadway Shuttle";
             }
@@ -114,6 +116,5 @@ function updateFeeds() {
 
 $(document).ready(function() {
     updateFeeds();
-  //  window.setInterval('updateFeeds()',30*1000);
-    console.log('update');
+    window.setInterval(updateFeeds,30*1000);
 });
