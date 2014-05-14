@@ -85,10 +85,6 @@ function getDeparturesForStops(stops, agency) {
     var url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
     var token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
 
-    var div = $(".routes."+agency);
-    //clear routes
-    div.empty();
-
     $(stops).each(function(index, element) {
         $.ajax({
             type: "GET",
@@ -109,6 +105,10 @@ function updateFeeds() {
     var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
+
+    //clear existing routes
+    var routes = $(".routes");
+    routes.empty();
 
     getDeparturesForStops(BART_stops, "BART");
     getDeparturesForStops(ACTransit_stops, "ACTransit");
