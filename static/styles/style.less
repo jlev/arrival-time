@@ -1,4 +1,4 @@
-@import '.reset.css';
+@import 'reset.css';
 @import 'less/grid.less';
 
 
@@ -8,33 +8,27 @@
 
 // Specify the number of columns and set column and gutter widths
 @columns: 12;
-@column-width: 160;
-@gutter-width: 1;
-
-// Uncomment the definition below for a percentage-based layout
-//@total-width: 100%;
-
-//general text
-
+@column-width: 100;
+@gutter-width: 20;
 
 body {
-  padding: 20px;
   background-color: #58585b;
   font-family: 'Roboto';
+  margin-left: 50px; //margin-left match half column width
+  margin-top:20px; //margin-top match gutter
 }
 
 h1 {
   font-family: 'Open+Sans', Arial, serif; font-weight: 800;
   color: white;
   font-size: 75;
-  margin: 0px 0 0px 0;
 }
 
 h2 {
   font-family: 'Roboto', Arial, serif; font-weight: 600;
   color: #d1d2d4;
-  font-size: 41;
-  margin: -10px 0 0px 0;
+  font-size: 36;
+  margin: -10px 0px;
 }
 
 h3 {
@@ -42,7 +36,9 @@ h3 {
   font-size: 28;
   text-align: center;
   clear: left;
-	.push(1);
+  margin-top:10px;
+  margin-bottom:10px;
+
 }
 
 ul {
@@ -56,101 +52,97 @@ ul {
 
 // header
 header#top {
-  .column(12);
+  .row(12);
 
-  .bart-image {
-    .column(1);
-  	margin: 0 -27px 0 106px;
+  .left {
+    .column(4, 12);
+    img { .column(1); margin-left:0; }
   }
-  .bart-text {
-    .column(3);
-  }
-  .ac-image {
-    .column(1);
+  .right {
+    .column(6, 12);
     .push(1);
-		margin: 0 -23px 0 225px;
+    img { .column(1); margin-left:0; }
   }
-  .ac-text {
-    .column(4)
-  }
+  margin-bottom:20px;
 }
 
 // main body
 .content {
-  .column(12);
-}
-.left {
-  .column(3);
-	.push(1);
-}
-.right {
-  .column(6);
-  .push(1);
+  .row(12);
+
+  .left {
+    .column(4, 12);
+  }
+  .right {
+    .column(6, 12);
+    .push(1);
+  }
 }
 
-//individual trains and buses
-
+//individual routes
 ul.routes {
   margin-bottom:20px;
 
 	li {
-    float: left;
     margin-bottom: 20px;
+    float: left;
+    //background-color:black;
 
     div {
   		padding: 10px;
       text-align: center;
 
   		&.departures {
-        .column(1);
-  			color:white;
+        color:white;
   			background-color:black;
         margin-bottom: 20px;
+        padding-left:0;
+        padding-right:0;
   		}
     }
 	}
 
 	&.BART {
-    .column(3);
+    .row(4);
 
 		li {
       clear: left;
     }
 
 		.stopName {
-      .column(2);
-			width: 275px; //custom, break grid
+      .column(2, 4);
 			background-color:#27a9e1;
 		}
     .departures {
-      .column(1);
+      .column(2, 4);
+      margin-left: -10px; //pull across gutter
     }
 	}
 
 	&.ACTransit {
-    .column(6);
-    .push(1);
+    .row(6);
 
 		li {
-			.column(3);
+			.column(3, 6);
 		}
 
 		.stopName {
-			.column(1);
+			.column(1, 6);
+      margin:0;
 			background-color:#006e57;
 		}
 	}
 
 	&.Broadway {
-    .column(6);
-    .push(1);
+    .row(6);
 
 		.stopname {
-      .column(3);
+      .column(4, 6);
 			background-color:#9FBE3C;
 		}
     .departures {
-      .column(2);
+      .column(2, 6);
+      margin-left: -10px; //pull across gutter
     }
 	}
 }
