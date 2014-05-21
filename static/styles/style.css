@@ -38,7 +38,6 @@ h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 ul {
   font-size: 35;
   list-style-type: none;
@@ -108,15 +107,9 @@ header#top .right img {
 .content .right {
   display: inline;
   float: left;
-<<<<<<< HEAD
-  width: 520px;
-  margin: 0 0px;
-  margin-left: 160px;
-=======
   width: 700px;
   margin: 0 10px;
   margin-left: 130px;
->>>>>>> FETCH_HEAD
 }
 ul.routes {
   margin-bottom: 20px;
@@ -156,12 +149,6 @@ ul.routes.BART li {
 ul.routes.BART .stopName {
   display: inline;
   float: left;
-<<<<<<< HEAD
-  width: 330px;
-  margin: 0 0px;
-  background-color: #27a9e1;
-  margin: 0 0 20px -102px;
-=======
   width: 220px;
   margin: 0 10px;
   background-color: #27a9e1;
@@ -186,7 +173,6 @@ ul.routes.ACTransit:after {
 }
 ul.routes.ACTransit:after {
   clear: both;
->>>>>>> FETCH_HEAD
 }
 ul.routes.ACTransit li {
   display: inline;
@@ -202,14 +188,6 @@ ul.routes.ACTransit .stopName {
   margin: 0;
   background-color: #006e57;
 }
-<<<<<<< HEAD
-ul.routes.Broadway li {
-  width: 700px;
-  float: left;
-  position: relative;
-  left: 90px;
-  margin-bottom: 20px;
-=======
 ul.routes.Broadway {
   display: block;
   width: 739.9999999999999px;
@@ -223,7 +201,6 @@ ul.routes.Broadway:after {
 }
 ul.routes.Broadway:after {
   clear: both;
->>>>>>> FETCH_HEAD
 }
 ul.routes.Broadway .stopname {
   display: inline;
@@ -231,13 +208,6 @@ ul.routes.Broadway .stopname {
   width: 459.99999999999994px;
   margin: 0 10px;
   background-color: #9FBE3C;
-<<<<<<< HEAD
-  margin-left: 65px;
-  width: 330px;
-}
-ul.routes.Broadway .departures {
-  width: 330px;
-=======
 }
 ul.routes.Broadway .departures {
   display: inline;
@@ -245,7 +215,6 @@ ul.routes.Broadway .departures {
   width: 220.00000000000003px;
   margin: 0 10px;
   margin-left: -10px;
->>>>>>> FETCH_HEAD
 }
 #lastupdated {
   display: inline;
@@ -254,4 +223,15 @@ ul.routes.Broadway .departures {
   margin: 0 10px;
   color: white;
   font-size: 21px;
+}
+#dataProviders {
+  display: inline;
+  float: left;
+  width: 1420px;
+  margin: 0 10px;
+  color: white;
+  margin-top: -10px;
+}
+#dataProviders img {
+  height: 30px;
 }
