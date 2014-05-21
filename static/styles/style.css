@@ -1,4 +1,4 @@
-@import '.reset.css';
+@import 'reset.css';
 body {
   width: 100%;
   *zoom: 1;
@@ -12,31 +12,31 @@ body:after {
   clear: both;
 }
 body {
-  margin: 0px;
   background-color: #58585b;
   font-family: 'Roboto';
+  margin-left: 50px;
+  margin-top: 20px;
 }
 h1 {
   font-family: 'Open+Sans', Arial, serif;
   font-weight: 800;
   color: white;
   font-size: 75;
-  margin: 0px 0 0px 0;
 }
 h2 {
   font-family: 'Roboto', Arial, serif;
   font-weight: 600;
   color: #d1d2d4;
-  font-size: 41;
-  margin: -10px 0 0px 0;
+  font-size: 36;
+  margin: -10px 0px;
 }
 h3 {
   color: white;
-  margin: 19px 0 -10px 0;
   font-size: 28;
   text-align: center;
   clear: left;
-  margin-left: 160px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -44,58 +44,86 @@ ul {
   list-style-type: none;
 }
 header#top {
-  display: inline;
-  float: left;
-  width: 1920px;
-  margin: 0 0px;
-  margin-top: 20px;
+  display: block;
+  width: 1460px;
+  margin: 0 -10px;
+  *zoom: 1;
+  margin-bottom: 20px;
 }
-header#top .bart-image {
-  display: inline;
-  float: left;
-  width: 160px;
-  margin: 0 0px;
-  margin: 0 -27px 0 106px;
+header#top:before,
+header#top:after {
+  content: "";
+  display: table;
 }
-header#top .bart-text {
-  display: inline;
-  float: left;
-  width: 480px;
-  margin: 0 0px;
+header#top:after {
+  clear: both;
 }
-header#top .ac-image {
+header#top .left {
   display: inline;
   float: left;
-  width: 160px;
-  margin: 0 0px;
-  margin-left: 160px;
-  margin: 0 -23px 0 225px;
+  width: 459.99999999999994px;
+  margin: 0 10px;
 }
-header#top .ac-text {
+header#top .left img {
   display: inline;
   float: left;
-  width: 640px;
-  margin: 0 0px;
+  width: 100px;
+  margin: 0 10px;
+  margin-left: 0;
+}
+header#top .right {
+  display: inline;
+  float: left;
+  width: 700px;
+  margin: 0 10px;
+  margin-left: 130px;
+}
+header#top .right img {
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 0 10px;
+  margin-left: 0;
 }
 .content {
-  display: inline;
-  float: left;
-  width: 1920px;
-  margin: 0 0px;
+  display: block;
+  width: 1460px;
+  margin: 0 -10px;
+  *zoom: 1;
 }
-.left {
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content .left {
   display: inline;
   float: left;
+  width: 459.99999999999994px;
+  margin: 0 10px;
+}
+.content .right {
+  display: inline;
+  float: left;
+<<<<<<< HEAD
   width: 520px;
   margin: 0 0px;
   margin-left: 160px;
+=======
+  width: 700px;
+  margin: 0 10px;
+  margin-left: 130px;
+>>>>>>> FETCH_HEAD
 }
-.right {
-  display: inline;
+ul.routes {
+  margin-bottom: 20px;
+}
+ul.routes li {
+  margin-bottom: 20px;
   float: left;
-  width: 960px;
-  margin: 0 0px;
-  margin-left: 0px;
 }
 ul.routes li div {
   padding: 10px;
@@ -103,58 +131,127 @@ ul.routes li div {
 }
 ul.routes li div.departures {
   color: white;
-  display: inline;
-  float: left;
-  width: 160px;
-  margin: 0 0px;
   background-color: black;
+  margin-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+ul.routes.BART {
+  display: block;
+  width: 500.00000000000006px;
+  margin: 0 -10px;
+  *zoom: 1;
+}
+ul.routes.BART:before,
+ul.routes.BART:after {
+  content: "";
+  display: table;
+}
+ul.routes.BART:after {
+  clear: both;
 }
 ul.routes.BART li {
-  float: left;
   clear: left;
 }
 ul.routes.BART .stopName {
   display: inline;
   float: left;
+<<<<<<< HEAD
   width: 330px;
   margin: 0 0px;
   background-color: #27a9e1;
   margin: 0 0 20px -102px;
+=======
+  width: 220px;
+  margin: 0 10px;
+  background-color: #27a9e1;
+}
+ul.routes.BART .departures {
+  display: inline;
+  float: left;
+  width: 220px;
+  margin: 0 10px;
+  margin-left: -10px;
+}
+ul.routes.ACTransit {
+  display: block;
+  width: 739.9999999999999px;
+  margin: 0 -10px;
+  *zoom: 1;
+}
+ul.routes.ACTransit:before,
+ul.routes.ACTransit:after {
+  content: "";
+  display: table;
+}
+ul.routes.ACTransit:after {
+  clear: both;
+>>>>>>> FETCH_HEAD
 }
 ul.routes.ACTransit li {
-  width: 460px;
+  display: inline;
   float: left;
-  position: relative;
-  left: 90px;
-  margin-bottom: 20px;
+  width: 340px;
+  margin: 0 10px;
 }
 ul.routes.ACTransit .stopName {
   display: inline;
   float: left;
-  width: 160px;
-  margin: 0 0px;
+  width: 100px;
+  margin: 0 10px;
+  margin: 0;
   background-color: #006e57;
 }
+<<<<<<< HEAD
 ul.routes.Broadway li {
   width: 700px;
   float: left;
   position: relative;
   left: 90px;
   margin-bottom: 20px;
+=======
+ul.routes.Broadway {
+  display: block;
+  width: 739.9999999999999px;
+  margin: 0 -10px;
+  *zoom: 1;
+}
+ul.routes.Broadway:before,
+ul.routes.Broadway:after {
+  content: "";
+  display: table;
+}
+ul.routes.Broadway:after {
+  clear: both;
+>>>>>>> FETCH_HEAD
 }
 ul.routes.Broadway .stopname {
+  display: inline;
+  float: left;
+  width: 459.99999999999994px;
+  margin: 0 10px;
   background-color: #9FBE3C;
+<<<<<<< HEAD
   margin-left: 65px;
   width: 330px;
 }
 ul.routes.Broadway .departures {
   width: 330px;
+=======
+}
+ul.routes.Broadway .departures {
+  display: inline;
+  float: left;
+  width: 220.00000000000003px;
+  margin: 0 10px;
+  margin-left: -10px;
+>>>>>>> FETCH_HEAD
 }
 #lastupdated {
   display: inline;
   float: left;
-  width: 1920px;
-  margin: 0 0px;
+  width: 1420px;
+  margin: 0 10px;
   color: white;
   font-size: 21px;
 }

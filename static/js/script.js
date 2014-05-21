@@ -1,4 +1,4 @@
-BART_DIRECTION_LOOKUP = {
+var BART_DIRECTION_LOOKUP = {
     '24th St. Mission': 'South',
     'Bayfair': 'North',
     'Concord': 'North',
@@ -46,11 +46,13 @@ function parseFeed(feed, agency) {
         }
 
         var direction = route.find('RouteDirection');
+        var outputSel, stopName = null;
+
         if (direction.length > 0) {
             direction = direction.attr('Code');
 
             // special case for AC Transit Broadway shuttle
-            if (agency === "ACTransit" && (route_name === "BSD" || route_name == "BSN")) {
+            if (agency === "ACTransit" && (route_name === "BSD" || route_name === "BSN")) {
                 agency = "Broadway";
                 route_name = "Broadway Shuttle";
             }
@@ -83,10 +85,6 @@ function getDeparturesForStops(stops, agency) {
     var url = "http://services.my511.org/Transit2.0/GetNextDeparturesByStopCode.aspx";
     var token = "bfdbbd13-e63e-4292-8655-12bf955f6380";
 
-    var div = $(".routes."+agency);
-    //clear routes
-    div.empty();
-
     $(stops).each(function(index, element) {
         $.ajax({
             type: "GET",
@@ -108,12 +106,15 @@ function updateFeeds() {
                        50958 //Broadway and 17th St 19th St BART Station ~ South
                     ];
 
+    //clear existing routes
+    var routes = $(".routes");
+    routes.empty();
+
     getDeparturesForStops(BART_stops, "BART");
     getDeparturesForStops(ACTransit_stops, "ACTransit");
 }
 
 $(document).ready(function() {
     updateFeeds();
-  //  window.setInterval('updateFeeds()',30*1000);
-    console.log('update');
+    window.setInterval(updateFeeds,30*1000);
 });
