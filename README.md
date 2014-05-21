@@ -17,6 +17,4 @@ This application requires a small Flask server running to make the cross-domain 
 
 Terms of Service
 ----------------
-511 provides this data AS IS and makes no warranty as to its accuracy, completeness, reliability, timeliness, or usefulness.
-http://511.org/developer-resources_api-terms_rtt.asp
-
+511 provides this data [AS IS](http://511.org/developer-resources_api-terms_rtt.asp) and makes no warranty as to its accuracy, completeness, reliability, timeliness, or usefulness. Code released under the [MIT License](https://github.com/jlev/arrival-time/raw/master/LICENSE).
