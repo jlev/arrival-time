@@ -36,7 +36,7 @@ function parseFeed(feed, agency) {
             direction = direction.attr('Code');
 
             // special case for AC Transit Broadway shuttle
-            if (agency === "ACTransit" && (route_name === "BSD" || route_name === "BSN")) {
+            if (agency === "ACTransit" && (route_name === "BSD" || route_name === "BSN" || route_name === "Broadway Shuttle Weekdays")) {
                 agency = "Broadway";
                 route_name = "Broadway Shuttle";
             }
