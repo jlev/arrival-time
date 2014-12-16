@@ -49,7 +49,6 @@ function parseFeed(feed, agency) {
 
             stopName = route_name;
             outputSel = '.routes.'+agency+'.'+direction;
-            console.log(outputSel);
 
         } else {
             //special case for BART directions
