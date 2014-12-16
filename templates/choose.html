@@ -1,20 +1,11 @@
-<html>
+{% extends "base.html" %}
 
-<head>
-
-<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" media="screen" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-</head>
-
-<body>
-
+{% block header %}
 <h1>Choose location</h1>
 <ul class="choose">
     <li><a href="/oakstop">Oakstop</a></li>
     <li><a href="/aspiration">Aspiration</a></li>
 </ul>
+{% endblock %}
 
-</body>
-</html>
+{% block updated %}{% endblock %}

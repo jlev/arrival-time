@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" media="screen" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block script %}{% endblock %}
+
+</head>
+
+<body>
+
+  <header id="top">
+        {% block header %}{% endblock %}
+  </header>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+
+        {% block updated %}
+        <div id="lastUpdated">Last Updated: <span></span></div>
+        {% endblock %}
+
+    <div id="dataProviders">Transit data supplied through agreement with San Francisco Bay Area’s 511 and participating transit providers. <img src="../static/img/511-logo.png"> {% block extra_attr %}{% endblock %}</div>
+
+    </div>
+
+</body>
+</html>
