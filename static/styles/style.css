@@ -37,6 +37,11 @@ h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+h4 {
+  font-size: 24;
+  text-align: center;
+  margin-bottom: 5px;
+}
 ul {
   font-size: 35;
   list-style-type: none;
@@ -251,20 +256,6 @@ ul.routes.Broadway .departures {
   margin: 0 10px;
   margin-left: -10px;
 }
-ul.routes.SF-MUNI {
-  display: block;
-  width: 740px;
-  margin: 0 -10px;
-  *zoom: 1;
-}
-ul.routes.SF-MUNI:before,
-ul.routes.SF-MUNI:after {
-  content: "";
-  display: table;
-}
-ul.routes.SF-MUNI:after {
-  clear: both;
-}
 ul.routes.SF-MUNI li {
   display: inline;
   float: left;
@@ -278,6 +269,44 @@ ul.routes.SF-MUNI .stopname {
   margin: 0 10px;
   margin: 0;
   background-color: #C51153;
+}
+.two-col {
+  display: block;
+  width: 740px;
+  margin: 0 -10px;
+  *zoom: 1;
+}
+.two-col:before,
+.two-col:after {
+  content: "";
+  display: table;
+}
+.two-col:after {
+  clear: both;
+}
+.two-col .col-one {
+  display: inline;
+  float: left;
+  width: 340px;
+  margin: 0 10px;
+}
+.two-col .col-one .stopname {
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 0 10px;
+}
+.two-col .col-two {
+  display: inline;
+  float: left;
+  width: 340px;
+  margin: 0 10px;
+}
+.two-col .col-two .stopname {
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 0 10px;
 }
 #lastupdated {
   display: inline;

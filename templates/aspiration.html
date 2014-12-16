@@ -57,15 +57,7 @@ $(document).ready(function() {
 });
 </script>
 <style>
-    /* rainbow! */
-    ul.routes.BART li.DalyCity .stopName {
-        background: repeating-linear-gradient( to right,
-          #EB212E, #EB212E 60px,
-          #F9E233 60px, #F9E233 120px,
-          #1DB0ED 120px, #1DB0ED 180px,
-          #52B74F 180px, #52B74F
-        );
-    }
+    .code { float: right; }
 </style>
 {% endblock %}
 
@@ -93,20 +85,35 @@ $(document).ready(function() {
         </div>
 
         <div class="right">
-            <h3>Mission St Northbound</h3>
-            <ul class="routes SF-MUNI North"></ul>
+            <h3>Mission St</h3>
 
-            <h3>Mission St Southbound</h3>
-            <ul class="routes SF-MUNI South"></ul>
+            <div class="two-col">
+                <div class="col-one">
+                    <h4>North</h4>
+                    <ul class="routes SF-MUNI North"></ul>
+                </div>
 
-            <h3>16th St Eastbound</h3>
-            <ul class="routes SF-MUNI East"></ul>
+                <div class="col-two">
+                    <h4>South</h4>
+                    <ul class="routes SF-MUNI South"></ul>
+                </div>
+            </div>
 
-            <h3>16th St Westbound</h3>
-            <ul class="routes SF-MUNI West"></ul>
+
+            <h3>16th St</h3>
+            <div class="two-col">
+                <div class="col-one">
+                    <h4>East</h4>
+                    <ul class="routes SF-MUNI East"></ul>
+                </div>
+                <div class="col-two">
+                    <h4>West</h4>
+                    <ul class="routes SF-MUNI West"></ul>
+                </div>
+            </div>
         </div>
 {% endblock %}
 
 {% block extra_attr %}
-| <a href="http://github.com/jlev/arrival-time">Code available</a> under GPLv3</div>
+<div class="code"><a href="http://github.com/jlev/arrival-time">Code</a> GPLv3</div>
 {% endblock %}
