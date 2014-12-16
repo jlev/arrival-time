@@ -1,23 +1,3 @@
-var BART_DIRECTION_LOOKUP = {
-    '24th St. Mission': 'South',
-    'Bayfair': 'North',
-    'Concord': 'North',
-    'Daly City': 'South',
-    'Dublin/Pleasanton': 'South',
-    'Embarcadero': 'South',
-    'Montgomery': 'South',
-    'Fremont': 'South',
-    'South San Francisco': 'South',
-    'Millbrae': 'South',
-    'Union City': 'South',
-    'North Concord': 'North',
-    'Pittsburg Bay Point': 'North',
-    'Richmond': 'North',
-    'SF Airport then Millbrae': 'South',
-    'SF Airport then Pittsburg Bay Point': 'South',
-    'SF Airport': 'South'
-};
-
 String.prototype.condenseSpaces = function() {
     return this.split(' ').join('');
 };

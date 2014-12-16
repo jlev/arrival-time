@@ -9,6 +9,25 @@
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script>
+var BART_DIRECTION_LOOKUP = {
+    '24th St. Mission': 'South',
+    'Bayfair': 'North',
+    'Concord': 'North',
+    'Daly City': 'South',
+    'Dublin/Pleasanton': 'South',
+    'Embarcadero': 'North',
+    'Montgomery': 'North',
+    'Fremont': 'South',
+    'South San Francisco': 'South',
+    'Millbrae': 'South',
+    'Union City': 'South',
+    'North Concord': 'North',
+    'Pittsburg Bay Point': 'North',
+    'Richmond': 'North',
+    'SF Airport then Millbrae': 'South',
+    'SF Airport then Pittsburg Bay Point': 'South',
+    'SF Airport': 'South'
+};
 
 function updateFeeds() {
     var BART_stops = [10, 99]; // 16th St Mission, platforms 1,2
