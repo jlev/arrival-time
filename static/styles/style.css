@@ -142,11 +142,6 @@ ul.routes.BART {
   width: 500px;
   margin: 0 -10px;
   *zoom: 1;
-  /* yellow */
-  /* red */
-  /* blue */
-  /* green */
-  /* orange */
 }
 ul.routes.BART:before,
 ul.routes.BART:after {
@@ -158,6 +153,9 @@ ul.routes.BART:after {
 }
 ul.routes.BART li {
   clear: left;
+}
+ul.routes.BART li.Concord .stopName {
+  background-color: #F9E233;
 }
 ul.routes.BART li.PittsburgBayPoint .stopName {
   background-color: #F9E233;
@@ -180,11 +178,15 @@ ul.routes.BART li.Fremont .stopName {
 ul.routes.BART li.Fremont .stopName {
   background-color: #F7A431;
 }
+ul.routes.BART li.DalyCity .stopName {
+  background: repeating-linear-gradient(to right, #eb212e, #eb212e 60px, #f9e233 60px, #f9e233 120px, #1db0ed 120px, #1db0ed 180px, #52b74f 180px, #52b74f);
+}
 ul.routes.BART .stopName {
   display: inline;
   float: left;
   width: 220px;
   margin: 0 10px;
+  background-color: #188FCA;
 }
 ul.routes.BART .departures {
   display: inline;

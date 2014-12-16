@@ -116,27 +116,38 @@ ul.routes {
       clear: left;
     }
 
-    /* yellow */
+    // yellow
+    li.Concord .stopName { background-color: #F9E233; }
     li.PittsburgBayPoint .stopName { background-color: #F9E233; }
     li.SFAirport .stopName { background-color: #F9E233; }
 
-    /* red */
+    // red
     li.Richmond .stopName { background-color: #EB212E; }
     li.Millbrae .stopName { background-color: #EB212E; }
 
-    /* blue */
+    // blue
     li.DublinPleasanton .stopName { background-color: #1DB0ED; }
 
-    /* green */
+    // green
     li.Fremont .stopName { background-color: #52B74F; }
 
-    /* orange */
+    // orange
     li.Fremont .stopName { background-color: #F7A431; }
+    //fremont can be either green or orange, override in location template
 
-    //fremont is complicated, override in location template
+    // daly city can be any color
+    li.DalyCity .stopName {
+        background: repeating-linear-gradient( to right,
+          #EB212E, #EB212E 60px,
+          #F9E233 60px, #F9E233 120px,
+          #1DB0ED 120px, #1DB0ED 180px,
+          #52B74F 180px, #52B74F
+        );
+    }
 
 		.stopName {
       .column(2, 4);
+      background-color: #188FCA; // bart blue default
 		}
     .departures {
       .column(2, 4);
