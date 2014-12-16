@@ -117,6 +117,9 @@ ul.choose a,
 ul.choose a:visited {
   color: white;
 }
+.stopName {
+  text-shadow: 1px 1px black;
+}
 ul.routes {
   margin-bottom: 20px;
 }
