@@ -40,8 +40,8 @@ function updateFeeds() {
     var MUNI_stops = [ 15551, // Mission St, Northbound
                        15552, // Mission St, Southbound
                        13291, // 16th St, Westbound
-                       13293, // 16th St, Eastbound (west of intersection)
                        13292, // 16th St, Eastbound (east of intersection)
+                       13293, // 16th St, Eastbound (west of intersection)
                     ];
 
     //clear existing routes
@@ -58,6 +58,7 @@ $(document).ready(function() {
 </script>
 <style>
     .code { float: right; }
+    ul.routes.BART li.Fremont .stopName { background-color: #52B74F; }
 </style>
 {% endblock %}
 
