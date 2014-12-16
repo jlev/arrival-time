@@ -310,7 +310,7 @@ ul.routes.SF-MUNI .stopname {
   width: 100px;
   margin: 0 10px;
 }
-#lastupdated {
+footer {
   display: inline;
   float: left;
   width: 1420px;
@@ -318,10 +318,6 @@ ul.routes.SF-MUNI .stopname {
   font-size: 21px;
 }
 #dataProviders {
-  display: inline;
-  float: left;
-  width: 1420px;
-  margin: 0 10px;
   margin-top: -10px;
 }
 #dataProviders img {

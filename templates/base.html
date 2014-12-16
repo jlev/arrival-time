@@ -14,20 +14,21 @@
 
 <body>
 
-  <header id="top">
+    <header id="top">
         {% block header %}{% endblock %}
-  </header>
+    </header>
 
     <div class="content">
         {% block content %}{% endblock %}
+    </div>
 
+    <footer>
         {% block updated %}
         <div id="lastUpdated">Last Updated: <span></span></div>
         {% endblock %}
 
-    <div id="dataProviders">Transit data supplied through agreement with San Francisco Bay Area’s 511 and participating transit providers. <img src="../static/img/511-logo.png"> {% block extra_attr %}{% endblock %}</div>
-
-    </div>
+        <div id="dataProviders">Transit data supplied through agreement with San Francisco Bay Area’s 511 and participating transit providers. <img src="../static/img/511-logo.png"> {% block extra_attr %}{% endblock %}</div>
+    </footer>
 
 </body>
 </html>
