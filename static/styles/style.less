@@ -37,12 +37,14 @@ h3 {
   clear: left;
   margin-top:10px;
   margin-bottom:10px;
+  padding-left: 10px;
 }
 
 h4 {
   font-size: 24;
   text-align: center;
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 ul {
@@ -122,6 +124,11 @@ ul.routes {
       clear: left;
     }
 
+    .stopName {
+      .column(2, 4);
+      background-color: #188FCA; // bart blue default
+    }
+
     // yellow
     li.Concord .stopName { background-color: #F9E233; }
     li.PittsburgBayPoint .stopName { background-color: #F9E233; }
@@ -151,10 +158,6 @@ ul.routes {
         );
     }
 
-		.stopName {
-      .column(2, 4);
-      background-color: #188FCA; // bart blue default
-		}
     .departures {
       .column(2, 4);
       margin-left: -10px; //pull across gutter
