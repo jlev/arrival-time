@@ -2,6 +2,10 @@ String.prototype.condenseSpaces = function() {
     return this.split(' ').join('');
 };
 
+// override these in location-specific templates
+var BART_DIRECTION_LOOKUP = {};
+var MUNI_DIRECTION_LOOKUP = {};
+
 function parseFeed(feed, agency) {
     var data = $.parseXML(feed.content);
     var agency_name = $(data).find('Agency').attr('Name').condenseSpaces();
@@ -38,8 +42,9 @@ function parseFeed(feed, agency) {
             }
 
             // truncate Muni route numbers
-            if (agency == "SF-MUNI") {
+            if (agency === "SF-MUNI") {
                 route_name = route_name.split('-')[0];
+                direction = MUNI_DIRECTION_LOOKUP[route_name+"~"+direction];
             }
 
             stopName = route_name;

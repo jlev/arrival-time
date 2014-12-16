@@ -29,6 +29,19 @@ var BART_DIRECTION_LOOKUP = {
     'SF Airport': 'South'
 };
 
+var MUNI_DIRECTION_LOOKUP = {
+    '14~Inbound': 'North',
+    '14L~Inbound': 'North',
+    '14~Outbound': 'South',
+    '14L~Outbound': 'South',
+    '22~Inbound': 'West',
+    '22~Outbound': 'East',
+    '33~Inbound': 'East',
+    '33~Outbound': 'West',
+    '49~Inbound': 'North',
+    '49~Outbound': 'South'
+}
+
 function updateFeeds() {
     var BART_stops = [10, 99]; // 16th St Mission, platforms 1,2
     var MUNI_stops = [ 15551, // Mission St and 16th St, Inbound
@@ -80,18 +93,24 @@ $(document).ready(function() {
 
     <div class="content">
         <div class="left">
-            <h3>Northbound</h3>
+            <h3>Downtown SF / East Bay</h3>
             <ul class="routes BART North"></ul>
             <h3>Southbound</h3>
             <ul class="routes BART South"></ul>
         </div>
 
         <div class="right">
-            <h3>Inbound</h3>
-            <ul class="routes SF-MUNI Inbound"></ul>
+            <h3>Mission North</h3>
+            <ul class="routes SF-MUNI North"></ul>
 
-            <h3>Outbound</h3>
-            <ul class="routes SF-MUNI Outbound"></ul>
+            <h3>Mission South</h3>
+            <ul class="routes SF-MUNI South"></ul>
+
+            <h3>16th East</h3>
+            <ul class="routes SF-MUNI East"></ul>
+
+            <h3>16th West</h3>
+            <ul class="routes SF-MUNI West"></ul>
         </div>
 
         <div id="lastUpdated">Last Updated: <span></span></div>
