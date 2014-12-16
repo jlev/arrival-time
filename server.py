@@ -7,8 +7,16 @@ import os
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return render_template("index.html")
+def choose():
+  return render_template("choose.html")
+
+@app.route("/oakstop")
+def oakstop():
+    return render_template("oakstop.html")
+
+@app.route("/aspiration")
+def aspiration():
+    return render_template("aspiration.html")
 
 @app.route("/crossdomain")
 def crossdom():

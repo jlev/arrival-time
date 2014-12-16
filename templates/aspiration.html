@@ -8,6 +8,28 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script>
+
+function updateFeeds() {
+    var BART_stops = [10, 99]; // 16th St Mission, platforms 1,2
+    var MUNI_stops = [ 15551, // Mission St and 16th St, Inbound
+                       15552, // Mission St and 16th St, Outbound
+                       13291, // 16th St and Mission St, Inbound
+                       13293, // 16th St and Mission St, Outbound
+                    ];
+
+    //clear existing routes
+    $(".routes").empty();
+
+    getDeparturesForStops(BART_stops, "BART");
+    getDeparturesForStops(MUNI_stops, "SF-MUNI");
+}
+
+$(document).ready(function() {
+    updateFeeds();
+    window.setInterval(updateFeeds,30*1000);
+});
+</script>
 
 </head>
 
@@ -17,12 +39,12 @@
         <div class="left">
             <img src="../static/img/BART.png">
 			<h1>BART</h1>
-			<h2>19th Street Station<h2>
+			<h2>16th Street Mission<h2>
 		</div>
 
 		<div class="right">
-			<img src="../static/img/AC-transit.png">
-			<h1>AC TRANSIT</h1>
+			<img src="../static/img/bus.png">
+			<h1>MUNI</h1>
 			<h2>Bus Stops<h2>
 		</div>
 	</header>
@@ -31,18 +53,16 @@
         <div class="left">
             <h3>Northbound</h3>
             <ul class="routes BART North"></ul>
-            <h3>SF and Southbound</h3>
+            <h3>Southbound</h3>
             <ul class="routes BART South"></ul>
         </div>
 
         <div class="right">
-            <h3>Northbound</h3>
-        	<ul class="routes Broadway North"></ul>
-            <ul class="routes ACTransit North"></ul>
+            <h3>Inbound</h3>
+            <ul class="routes SF-MUNI Inbound"></ul>
 
-            <h3>Southbound</h3>
-        	<ul class="routes Broadway South"></ul>
-            <ul class="routes ACTransit South"></ul>
+            <h3>Outbound</h3>
+            <ul class="routes SF-MUNI Outbound"></ul>
         </div>
 
         <div id="lastUpdated">Last Updated: <span></span></div>

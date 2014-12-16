@@ -16,11 +16,11 @@ body {
   font-family: 'Roboto';
   margin-left: 50px; //margin-left match half column width
   margin-top:20px; //margin-top match gutter
+  color: white;
 }
 
 h1 {
   font-family: 'Open+Sans', Arial, serif; font-weight: 800;
-  color: white;
   font-size: 75;
 }
 
@@ -32,7 +32,6 @@ h2 {
 }
 
 h3 {
-  color: white;
   font-size: 28;
   text-align: center;
   clear: left;
@@ -78,6 +77,10 @@ header#top {
   }
 }
 
+ul.choose {
+  a, a:visited { color: white; }
+}
+
 //individual routes
 ul.routes {
   margin-bottom:20px;
@@ -92,7 +95,6 @@ ul.routes {
       text-align: center;
 
   		&.departures {
-        color:white;
   			background-color:black;
         margin-bottom: 20px;
         padding-left:0;
@@ -144,17 +146,30 @@ ul.routes {
       margin-left: -10px; //pull across gutter
     }
 	}
+
+  &.SF-MUNI {
+    .row(6);
+
+    li {
+      .column(3, 6);
+    }
+
+    .stopname {
+      .column(1, 6);
+      margin: 0;
+      background-color:#C51153;
+    }
+  }
+
 }
 
 #lastupdated {
 	.column(12);
-	color: white;
 	font-size: 21px;
 }
 
 #dataProviders {
   .column(12);
-  color: white;
   margin-top:-10px;
   img { height: 30px; }
 }

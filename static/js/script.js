@@ -56,8 +56,15 @@ function parseFeed(feed, agency) {
                 agency = "Broadway";
                 route_name = "Broadway Shuttle";
             }
+
+            // truncate Muni route numbers
+            if (agency == "SF-MUNI") {
+                route_name = route_name.split('-')[0];
+            }
+
             stopName = route_name;
             outputSel = '.routes.'+agency+'.'+direction;
+            console.log(outputSel);
 
         } else {
             //special case for BART directions
@@ -93,28 +100,9 @@ function getDeparturesForStops(stops, agency) {
                 'url':url+"?token="+token+"&stopcode="+element
             },
             dataType: "jsonp",
-            success: function(data) { parseFeed(data, agency); }
+            success: function(data) { parseFeed(data, agency);}
         });
     });
 
     $("#lastUpdated span").text(new Date());
 }
-
-function updateFeeds() {
-    var BART_stops = [65, 66]; //19th St. Oakland, platforms 1,2,3
-    var ACTransit_stops = [53335, //Broadway and 17th St 19th St BART Station ~ North
-                       50958 //Broadway and 17th St 19th St BART Station ~ South
-                    ];
-
-    //clear existing routes
-    var routes = $(".routes");
-    routes.empty();
-
-    getDeparturesForStops(BART_stops, "BART");
-    getDeparturesForStops(ACTransit_stops, "ACTransit");
-}
-
-$(document).ready(function() {
-    updateFeeds();
-    window.setInterval(updateFeeds,30*1000);
-});

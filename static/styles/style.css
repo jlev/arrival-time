@@ -16,11 +16,11 @@ body {
   font-family: 'Roboto';
   margin-left: 50px;
   margin-top: 20px;
+  color: white;
 }
 h1 {
   font-family: 'Open+Sans', Arial, serif;
   font-weight: 800;
-  color: white;
   font-size: 75;
 }
 h2 {
@@ -31,7 +31,6 @@ h2 {
   margin: -10px 0px;
 }
 h3 {
-  color: white;
   font-size: 28;
   text-align: center;
   clear: left;
@@ -60,7 +59,7 @@ header#top:after {
 header#top .left {
   display: inline;
   float: left;
-  width: 459.99999999999994px;
+  width: 460px;
   margin: 0 10px;
 }
 header#top .left img {
@@ -101,7 +100,7 @@ header#top .right img {
 .content .left {
   display: inline;
   float: left;
-  width: 459.99999999999994px;
+  width: 460px;
   margin: 0 10px;
 }
 .content .right {
@@ -110,6 +109,10 @@ header#top .right img {
   width: 700px;
   margin: 0 10px;
   margin-left: 130px;
+}
+ul.choose a,
+ul.choose a:visited {
+  color: white;
 }
 ul.routes {
   margin-bottom: 20px;
@@ -123,7 +126,6 @@ ul.routes li div {
   text-align: center;
 }
 ul.routes li div.departures {
-  color: white;
   background-color: black;
   margin-bottom: 20px;
   padding-left: 0;
@@ -131,7 +133,7 @@ ul.routes li div.departures {
 }
 ul.routes.BART {
   display: block;
-  width: 500.00000000000006px;
+  width: 500px;
   margin: 0 -10px;
   *zoom: 1;
 }
@@ -162,7 +164,7 @@ ul.routes.BART .departures {
 }
 ul.routes.ACTransit {
   display: block;
-  width: 739.9999999999999px;
+  width: 740px;
   margin: 0 -10px;
   *zoom: 1;
 }
@@ -190,7 +192,7 @@ ul.routes.ACTransit .stopName {
 }
 ul.routes.Broadway {
   display: block;
-  width: 739.9999999999999px;
+  width: 740px;
   margin: 0 -10px;
   *zoom: 1;
 }
@@ -205,23 +207,50 @@ ul.routes.Broadway:after {
 ul.routes.Broadway .stopname {
   display: inline;
   float: left;
-  width: 459.99999999999994px;
+  width: 460px;
   margin: 0 10px;
   background-color: #9FBE3C;
 }
 ul.routes.Broadway .departures {
   display: inline;
   float: left;
-  width: 220.00000000000003px;
+  width: 220px;
   margin: 0 10px;
   margin-left: -10px;
+}
+ul.routes.SF-MUNI {
+  display: block;
+  width: 740px;
+  margin: 0 -10px;
+  *zoom: 1;
+}
+ul.routes.SF-MUNI:before,
+ul.routes.SF-MUNI:after {
+  content: "";
+  display: table;
+}
+ul.routes.SF-MUNI:after {
+  clear: both;
+}
+ul.routes.SF-MUNI li {
+  display: inline;
+  float: left;
+  width: 340px;
+  margin: 0 10px;
+}
+ul.routes.SF-MUNI .stopname {
+  display: inline;
+  float: left;
+  width: 100px;
+  margin: 0 10px;
+  margin: 0;
+  background-color: #C51153;
 }
 #lastupdated {
   display: inline;
   float: left;
   width: 1420px;
   margin: 0 10px;
-  color: white;
   font-size: 21px;
 }
 #dataProviders {
@@ -229,7 +258,6 @@ ul.routes.Broadway .departures {
   float: left;
   width: 1420px;
   margin: 0 10px;
-  color: white;
   margin-top: -10px;
 }
 #dataProviders img {
