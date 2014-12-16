@@ -44,10 +44,11 @@ var MUNI_DIRECTION_LOOKUP = {
 
 function updateFeeds() {
     var BART_stops = [10, 99]; // 16th St Mission, platforms 1,2
-    var MUNI_stops = [ 15551, // Mission St and 16th St, Inbound
-                       15552, // Mission St and 16th St, Outbound
-                       13291, // 16th St and Mission St, Inbound
-                       13293, // 16th St and Mission St, Outbound
+    var MUNI_stops = [ 15551, // Mission St, Northbound
+                       15552, // Mission St, Southbound
+                       13291, // 16th St, Westbound
+                       13293, // 16th St, Eastbound (west of intersection)
+                       13292, // 16th St, Eastbound (east of intersection)
                     ];
 
     //clear existing routes
